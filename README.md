@@ -1,20 +1,20 @@
-# hail-the-utils - Htop
-This is the most popular top utility. 
+# Bmon
+This is a bandwidth monitoring utility. 
 
 To check your host machine's process run the following,
 ```
-docker run -it --rm --pid=host cgroups/utils:htop
+docker run -it --net=host cgroups/utils:bmon
 ```
 
 To check the process list of a specific container run the following,
 ```
-docker run -t --pid=container:30cb54597e38 cgroups/utils:htop
+docker run -it --net=container:30cb  cgroups/utils:bmon
 ```
 You can also alias it to day to day use,
 ```
-alias htop="docker run -it --rm --pid=host cgroups/utils:htop"
+alias htop="docker run -it --net=host cgroups/utils:bmon"
 ```
-Then just run htop
+Then just run bmon
 ```
-htop
+bmon
 ```
