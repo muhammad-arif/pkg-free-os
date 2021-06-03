@@ -1,2 +1,12 @@
-# pkg-free-os
-Essential (or non essential) utility tools in minimal docker container to use in server or highly secure environment like a tissue paper. Sometimes in a hardened server there are lots of necessary tools are missing like nc, sshd, vim, nano, nmap, etc which is make sense but it also makes troubleshooting and management very harder. Sometimes in a strict environment it is very difficult to patch a system tool which is why those tools were removed or disabled from those system. All of these mentioned case you can create a simple container with these images, use it and then remove the container (and image maybe) then you are good.
+# hail-the-utils - Htop
+This is the most popular top utility. 
+
+To check your host machine's process run the following,
+```
+docker run -it --rm --pid=host cgroups/utils:htop
+```
+
+To check the process list of a specific container run the following,
+```
+docker run -t --pid=container:30cb54597e38 cgroups/utils:htop
+```
